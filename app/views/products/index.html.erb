@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<section class="products-all container">
+
+  <table class="table">
+    <thead class="products-head">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image url</th>
+        <th scope="col" colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.image_url %></td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+<br>
+
+<button type="button" class="btn btn-secondary new-product-button" name="button"><%= link_to 'Add New Product', new_product_path %></button>
+
+</section>
