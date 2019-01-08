@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+//PRODUCTS-SHOW
 .product-show p {
   text-align: left;
 }
@@ -11,6 +11,7 @@
   width: 100%;
 }
 
+//PRODUCTS-INDEX
 .products-all .btn {
   background-color: white;
 }
@@ -44,4 +45,11 @@
 .products-all .product-price {
   color: #e06f0d;
   font-size: 1.35em;
+}
+
+//PRODUCTS-FORM
+
+.product-form {
+  width: 60%;
+  max-width: 750px;
 }
