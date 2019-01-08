@@ -4,34 +4,27 @@
 
 <section class="products-all container">
 
-  <table class="table">
-    <thead class="products-head">
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Image url</th>
-        <th scope="col" colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
+  <div class="container-fluid">
+    <div class="row">
       <% @products.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td><%= product.description %></td>
-          <td><%= product.image_url %></td>
-          <td><%= link_to 'Show', product %></td>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+        <div class="col-sm-4">
+          <div class="product-card">
+            <img class="product-image" src="<%= product.image_url %>" alt="">
+            <h3 class="product-name"><%= link_to product.name, product %></h3>
+            <p class="product-color"><%= product.colour %></p>
+            <h2 class="product-price">$<%= product.price %></h2>
+            <p><%= link_to 'Show', product %> | <span><%= link_to 'Edit', edit_product_path(product) %></span> |
+            <span><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
 
+  <div class="container">
+      <button type="button" class="btn btn-secondary new-product-button" name="button"><%= link_to 'Add New Product', new_product_path %></button>
+  </div>
 
-
-<br>
-
-<button type="button" class="btn btn-secondary new-product-button" name="button"><%= link_to 'Add New Product', new_product_path %></button>
 
 </section>

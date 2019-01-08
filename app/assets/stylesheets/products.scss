@@ -3,20 +3,45 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.products-head, th {
-  color: #e06f0d;
-}
-
-
-
 .product-show p {
   text-align: left;
 }
 
 .product-show img {
-  width: 100%
+  width: 100%;
 }
 
 .products-all .btn {
   background-color: white;
+}
+
+.products-all .product-image {
+  width: 100%;
+  padding: 10px;
+}
+
+.products-all .product-card {
+  border: 2px solid white;
+  margin-left: 5px;
+  background-color: #e0fffb
+}
+
+.products-all .new-product-button {
+  margin: 30px 10px auto;
+  padding-left: 15;
+
+}
+
+.products-all .product-name {
+  text-transform: uppercase;
+  text-align: center;
+}
+.product-name :hover{
+  color: #1cffe4
+}
+
+
+.products-all .product-price {
+  color: #e06f0d;
+  font-size: 1.35em;
 }
