@@ -24,3 +24,6 @@ end
 1.upto(PRODUCT_SEED_COUNT) do |i|
   Product.create(name:"seed-generated product ##{i}", description: LOREM, image_url: PLACEHOLDER_IMAGE, colour: random_color, price: random_price)
 end
+
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)
