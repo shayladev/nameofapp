@@ -1,1 +1,25 @@
-<h1>Orders</h1>
+<h1>Past Orders</h1>
+
+<div class="container orders-table">
+
+
+  <% @orders.each do |order| %>
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-7 order-row">
+        <img class="orders-product-image" src="<%= order.product.image_url %>">
+      </div>
+      <div class="col-sm-12 col-md-8 col-lg-5 order-row">
+        <h3>
+          Order # <%= order.id %>:
+          <%= link_to order.product.name, order %>
+        </h3>
+        <strong>$ <%= order.product.price.round(2) %></strong>
+        <p class="orders-description"><%= order.product.description %></p>
+        <div>
+            <h2 class="orders-total" >Total: $<%= (order.product.price * 1.13).round(2) %> </h2>
+        </div>
+      </div><!-- /col -->
+
+    </div>
+  <% end %>
+</div>

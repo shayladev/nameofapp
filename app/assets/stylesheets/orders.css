@@ -1,0 +1,62 @@
+.orders-table {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 60%;
+}
+
+.order-row {
+  border: 2px solid gray;
+  background-color: white;
+}
+
+.order-row h3 {
+  margin-top: 20px;
+}
+
+.order-row strong {
+  font-size:
+}
+
+
+.orders-product-image {
+  width: 100%;
+}
+
+.orders-total {
+  /* text-align: right;
+  margin-top: 50px; */
+  right: 10px;
+  bottom: 0;
+  position: absolute;
+}
+
+.orders-description {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.order-info {
+  width: 60%;
+  margin-top: 50px;
+}
+
+.order-info-row {
+  margin-top: 50px;
+}
+
+.order-info-id {
+  text-align: center;
+}
+
+.show-order-product-image {
+  width: 100%;
+}
+
+.order-side-bar {
+  margin: auto;
+
+}
+
+.order-info-details h2 {
+  background-color: #1cffe4;
+}

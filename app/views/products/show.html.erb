@@ -10,7 +10,7 @@
       <p><strong>Color:</strong>
         <%= @product.colour %></p>
       <p><strong>Price:</strong>
-        <%= @product.price %></p>
+        <%= number_to_currency(@product.price.to_f)%></p>
     </div>
     <div class="col-6">
       <img src="<%= @product.image_url %>">
