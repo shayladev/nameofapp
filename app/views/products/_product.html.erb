@@ -1,6 +1,6 @@
 <div class="col-sm-4">
   <div class="product-card">
-    <img class="product-image" src="<%= product.image_url %>" alt="">
+    <%= link_to "#{image_tag(product.image_url, class: "product-image")}".html_safe, product %> 
     <h3 class="product-name"><%= link_to product.name, product %></h3>
     <p class="product-color"><%= product.colour %></p>
     <h2 class="product-price"><%= number_to_currency(product.price.to_f)%></h2>
