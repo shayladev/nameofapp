@@ -1,3 +1,15 @@
+<li class="nav-item search-box">
+  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+    <%= form.text_field :q, id: 'q', value: params[:q] %><%= form.submit 'Search' %>
+  <% end %>
+</li>
+
+
+
+
+
+
+
 <li data-target="#carouselExampleIndicators" data-slide-to="<%= @products.index(product) %>" class="<%= " active" if product == @products.first %>"></li>
 
 <a href="/simple_pages/index"><h5 class="site-entrance">Enter Site >>></h5></a>

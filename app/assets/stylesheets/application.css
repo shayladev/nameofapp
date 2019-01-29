@@ -35,9 +35,17 @@
      color: #e06f0d;
  }
 
+ .search-box {
+   margin:auto;
+   padding: 5px;
+ }
+
 
  .nav-item {
    text-transform: uppercase;
+   margin: auto;
+   font-size: 1.6em;
+   padding: 0 10px;
  }
 
  footer {
