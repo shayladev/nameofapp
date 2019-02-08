@@ -27,3 +27,7 @@ end
 
 Order.create(user_id: 1, product_id: 1, total: 1000.00)
 Order.create(user_id: 1, product_id: 2, total: 5000.0)
+
+Comment.create!(user: User.first, product: Product.first, rating: 1, body: "bad")
+Comment.create!(user: User.first, product: Product.first, rating: 4, body: "nice")
+Comment.create!(user: User.first, product: Product.first, rating: 2, body: "meh")
