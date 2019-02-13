@@ -1,0 +1,61 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.star-rating {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.star-rating img {
+  height: 25px;
+  width: 30px;
+}
+
+.user-customer p {
+  text-align: left;
+  margin: 0px;
+}
+
+.user-customer small {
+  padding-left: 5px;
+}
+
+.comments-form {
+  margin: 0px;
+  width: 100%;
+}
+
+.comment-body {
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.comments-submit {
+  margin: 0px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.product-reviews {
+  padding-left: 0px;
+}
+
+.customer-reviews {
+  padding-left: 15px;
+  border-top: 1px solid #1cffe4;
+  padding-top: 10px;
+}
+
+.customer-review-body {
+  margin-top: 15px;
+  margin-bottom: 40px;
+
+}
+
+.customer-review-body p{
+  margin: 0px;
+  text-align: left;
+}

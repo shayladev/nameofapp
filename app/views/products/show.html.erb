@@ -5,30 +5,47 @@
     <div class="col-md-12 col-lg-6">
       <h1>
       <%= @product.name %></h1>
-      <p><strong>Description:</strong>
+      <p class="product-show-description"><strong>Description:</strong>
       <%= @product.description %></p>
-      <p><strong>Color:</strong>
+      <p class="product-show-description"><strong>Color:</strong>
         <%= @product.colour %></p>
-      <p><strong>Price:</strong>
+      <p class="product-show-description"><strong>Price:</strong>
         <%= number_to_currency(@product.price.to_f)%></p>
     </div>
     <div class="col-md-12 col-lg-6">
-      <img src="<%= @product.image_url %>">
+      <img src="<%= @product.image_url %>" class="product-show-image">
     </div>
   </div>
 
   <div class="container comment-area">
-    <div class="highest-comment">
-      <p>Highest Rated Comment: <%= @product.highest_rating_comment.body %>
-      - Rating: <%= @product.highest_rating_comment.rating %></p>
-    </div>
-    <div class="lowest-comment">
-      <p>Lowest Rated Comment: <%= @product.lowest_rating_comment.body %>
-      - Rating: <%= @product.lowest_rating_comment.rating %></p>
-    </div>
+
+    <%if @product.highest_rating_comment %>
+      <div class="highest-comment">
+        <p>Highest Rated Comment: <%= @product.highest_rating_comment.body %>
+        - Rating: <%= @product.highest_rating_comment.rating %></p>
+      </div>
+    <% end %>
+
+    <% if @product.lowest_rating_comment %>
+      <div class="lowest-comment">
+        <p>Lowest Rated Comment: <%= @product.lowest_rating_comment.body %>
+        - Rating: <%= @product.lowest_rating_comment.rating %></p>
+      </div>
+    <% end %>
+
+    <% if @product.average_rating %>
+      <div class="average-rating">
+        <div class="rated star-rating" data-score="<%= @product.average_rating %>">Average Rating: </div>
+      </div>
+    <% end %>
+
+
+
+    <%= render 'new_comment' %>
+
+    <%= render 'comments' %>
 
   </div>
-
 
     <div class="container show-links">
       <%= link_to 'Edit', edit_product_path(@product) %> |

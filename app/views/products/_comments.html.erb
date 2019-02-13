@@ -1,0 +1,19 @@
+<div class="container product-reviews">
+  <h4 class="customer-review-header">Customer Reviews</h4>
+  <% @comments.each do |comment| %>
+    <div class=" customer-reviews">
+      <div class="user-customer">
+        <% if comment.user.first_name %>
+          <p><%= image_tag("user.png", class: "avatar") %><%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago"%></em></small></p>
+        <% else %>
+          <p><%= image_tag("user.png", class: "avatar") %>Anonymous<small><em><%= "#{time_ago_in_words(comment.created_at)} ago"%></em></small></p>
+        <% end %>
+      </div>
+      <div class="rated star-rating" data-score="<%= comment.rating %>"></div>
+      <div class="customer-review-body">
+        <p><%= comment.body %></p>
+      </div>
+    </div>
+
+  <% end %>
+</div>

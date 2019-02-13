@@ -3,12 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //PRODUCTS-SHOW
-.product-show p {
+
+
+.product-show-description {
   text-align: left;
 }
 
-.product-show img {
+.product-show-image {
   width: 100%;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 
 .comment-area {
@@ -16,8 +24,14 @@
   margin-bottom: 40px;
 }
 
-.comment-area p {
-  text-align: center;
+// .comment-area p {
+//   text-align: left;
+// }
+
+.comment-area h4 {
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .highest-comment {
@@ -38,6 +52,20 @@
 .show-links {
   font-size: 1.5em;
   text-align: center;
+  margin-bottom: 90px;
+}
+
+.average-rating {
+  display: flex;
+  border: 1px solid #f4f5f7;
+  margin: 5px;
+  text-align: center;
+  background-color: white;
+
+}
+
+.average-rating h2 {
+  min-width: 300px;
 }
 
 //PRODUCTS-INDEX
