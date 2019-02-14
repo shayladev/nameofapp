@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   #automatically created a Product model associated to a Products table
   has_many :comments
+  validates :name, presence: true
 
   def self.search(search_term)
     if Rails.env == "development"
