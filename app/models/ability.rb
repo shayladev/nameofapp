@@ -30,5 +30,8 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     user ||= User.new # guest user (not logged in)
     can :manage, User, id: user.id
+      if user.admin?
+        can: :destroy, :Comment
+      end
   end
 end
