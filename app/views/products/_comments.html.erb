@@ -13,7 +13,7 @@
       <div class="customer-review-body">
         <p><%= comment.body %>
           <% if signed_in? && current_user.admin? %>
-            <span class="destroy-icon"><%= link_to image_tag('si-glyph-delete.svg', alt:"Destroy").html_safe, product_comment_path(comment.product, comment), method: :delete, data: {confirm: 'Are you sure?'} %></span>
+            <span class="destroy-icon"><%= link_to image_tag('delete.png', alt:"Destroy").html_safe, product_comment_path(comment.product, comment), method: :delete, data: {confirm: 'Are you sure?'} %></span>
           <% end %>
         </p>
 
