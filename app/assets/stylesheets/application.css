@@ -16,37 +16,101 @@
  */
  body {
    position: relative;
-   font-family: Roboto, Arial;
-   background: #f4f9f9;
+   font-family: 'Squada One', 'Roboto', Arial;
+   /* background: #f4f9f9; */
+   background-color: white;
    margin: 0;
+   font-size: 1.5rem;
  }
 
- .navbar-nav {
-   background: #1cffe4;
-   text-align: center;
-   margin: auto;
- }
-
- //
- .navbar-nav li {
-    padding: 0 40px;
+  body a:hover {
+    color: #2ef2eb;
   }
- //
- .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-     color: #e06f0d;
+
+  #notice {
+    z-index: 10;
+    position: fixed;
+    top:0;
+    height: 60px;
+    width: 100vw;
+    background: black;
+    opacity: .75;
+    color: white;
+    border: 0px;
+    font-size: 1em;
+    font-family: Orbitron;
+    padding-top: 10px;
+    border-radius: 0px;
+    text-align: center;
+  }
+
+
+ // Navbar
+
+
+ .home-page-body {
+   font-family: 'Squada One';
+   font-size: 1.5rem;
  }
 
- .search-box {
-   margin:auto;
-   padding: 5px;
+ .home-page-body a:hover{
+   color: #2ef2eb;
  }
 
+ .specials-banner {
+   height: 60px;
+ }
 
- .nav-item {
-   text-transform: uppercase;
+ .special-1 {
+   width: 400px;
+   background-color: #f4d942;
    margin: auto;
-   font-size: 1.6em;
-   padding: 0 10px;
+   margin-top: 20px;
+   text-align: center;
+
+ }
+
+ .special-1 h1 {
+   font-size: 1rem;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+
+ .bike-navbar {
+   background-color: black;
+ }
+
+ .nav-link {
+     color: white;
+     font-family: 'Orbitron';
+     font-size:1.2rem;
+   }
+
+ .navbar-dark .navbar-brand {
+     color: #2ef2eb;
+ }
+
+ .dropdown-menu {
+   background-color: black;
+   color: white;
+   font-family: 'Orbitron';
+ }
+
+ .bike-nav-brand {
+   color: #2ef2eb;
+   font-size: 2rem;
+ }
+
+ .home_page_search_button {
+   color: #2ef2eb;
+   border-color: #2ef2eb;
+ }
+
+
+ .btn-outline-success:hover {
+     color: black ;
+     background-color: yellow;
+     border-color: #2ef2eb;
  }
 
  footer {

@@ -29,7 +29,10 @@
 
 .orders-description {
   text-align: left;
-  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 0.75em;
+  line-height: 23px;
+  font-family: Roboto;
 }
 
 .order-info {
@@ -56,4 +59,8 @@
 
 .order-info-details h2 {
   background-color: #1cffe4;
+}
+
+.show-links {
+  margin-top: 10px;
 }

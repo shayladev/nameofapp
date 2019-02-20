@@ -1,11 +1,17 @@
 class SimplePagesController < ApplicationController
   def index
+    @featured_product = Product.first
+    @products = Product.limit(3)
+
+  end
+
+  def show
+    @user = current_user
   end
 
   def landing_page
-    @featured_product = Product.first
-    @products = Product.limit(3)
     render layout: "landing_page"
+
   end
 
   # POST simple_pages/thank_you

@@ -1,19 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="products-index">
+  <section class="products-all container">
 
-<h1>Products</h1>
+    <h1>Products</h1>
 
-<section class="products-all container">
-
-
-  <div class="container-fluid">
-    <div class="row">
-      <%= render @products %>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render @products %>
+      </div>
     </div>
-  </div>
-
-  <div class="container">
-      <button type="button" class="btn btn-secondary new-product-button" name="button"><%= link_to 'Add New Product', new_product_path %></button>
-  </div>
 
 
-</section>
+      <% if current_user && current_user.admin? %>
+        <div class="container">
+            <button type="button" class="btn btn-secondary new-product-button" name="button"><%= link_to 'Add New Product', new_product_path %></button>
+        </div>
+        <% end %>
+
+  </section>
+</div>

@@ -4,23 +4,25 @@
 
 //
 
-
-h1 {
-  font-size: 3em;
-  text-align: center;
-  margin-top: 50px;
+p {
+  font-family: 'Squada One', 'Roboto', Arial;
+  font-size: 0.75em;
 }
+
 
 h2 {
   text-align: center;
   font-size: 1.25em;
 }
 
-p {
-  margin: 30px auto;
-  width: 80%;
-  text-align: center;
+.home_page_landing_section {
+  background: url('eric-muhr-1311273-unsplash.jpg') no-repeat center;
+}
 
+.home_page_landing {
+  width: 60%;
+  margin: auto;
+  background-color: white;
 }
 
 .main-image {
@@ -34,46 +36,209 @@ img {
 
 //Landing Page
 
-#landing_page_body {
+.landing-page-body {
+  width: 90%;
+  margin-top: 10vh;
+  max-height: 80%;
+  font-family: 'Squada One';
   background-color: white;
 }
+
+
+.landing-page-col {
+  /* border: 1px solid black; */
+  margin: 10px;
+  padding: 0px;
+}
+
+.landing-page-box {
+  /* max-height: 50vh; */
+  height: 90%;
+  background-color: white;
+  color: white;
+  margin: auto 10px auto 10px;
+}
+
+  .landing-page-box h1 {
+    background-color: black;
+    margin-bottom: 20px;
+    max-width: 70%;
+    padding-left: 10px;
+    color: #2ef2eb;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+.landing-page-carousel img {
+  width: 100%;
+  margin:0px;
+}
+
+.landing-page-right {
+  border-left: 5px solid black;
+}
+
+.landing-page-text {
+  margin-top: 50%;
+  vertical-align: bottom;
+  margin-left: 15px;
+}
+
+  .landing-page-text h2 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .landing-page-text h1:hover {
+      background-color: yellow;
+  }
+
+.shop-button-area {
+  background-color: #2ef2eb;
+  margin-left: 60%;
+  padding-right: 10px;
+  text-align: right;
+  margin-top: 0px auto 0px 70%;
+}
+
+  .shop-button-area a:hover {
+    text-decoration-line: none;
+    color:black;
+  }
+
+.shop-button {
+  font-size: 2.5rem;
+  color: black;
+  text-align: right;
+
+}
+
+
+
+
+// Index
+
 
 .carousel-prev, .carousel-next {
   background-color: black;
 }
 
 .carousel-image {
-  // height: 100vh;
   max-width: 100%;
-}
-
-.carousel-name {
-  color: black;
-}
-
-.carousel-price {
-  color: black;
 }
 
 .carousel {
   max-width: 850px;
   margin: auto;
-  height: 90%;
-  max-height: 90vh;
+  height: 85%;
+  max-height: 70vh;
 }
 
-.carousel-caption {
-  padding-bottom: 50px;
+
+.home-page-carousel-caption {
+  text-align: right;
+  right: 0;
+  top: 20px;
+  margin-left: 50%;
 }
 
-.site-entrance {
-  color: black;
+.caption-header {
+  background-color: black;
+  color: #2ef2eb;
+  font-size: 2.5rem;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.caption-price {
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 5px;
+  padding-right: 10px;
+  margin:0px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+
+// home_page_features
+
+.row {
+  margin: auto;
+}
+
+.home_page_feature {
+  /* width: 31.3%; */
+  height: 250px;
+  color: white;
+  background-color: black;
+  margin: 10px;
+
+}
+
+.home_page_feature p {
   text-align: center;
-  z-index: auto;
-  padding-top: 20px;
+  font-size: 2em;
+  margin: 25px;
+  margin-top: 50px;
+  line-height: 40px;
 }
+
+.home_feature_one {
+  background: url('feature1.png')
+}
+
+.home_feature_two {
+  background: url('feature2.png')
+}
+
+.home_feature_three {
+  background: url('feature3.png')
+}
+
+// About Page
+.about-page {
+  height: 100vw;
+  background: url('pablo-guerrero-1308504-unsplash.jpg') no-repeat center;
+}
+
+.about-box {
+  padding-top: 90px;
+}
+
+.about {
+  background-color: black;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.about p {
+  font-size: 1em;
+  font-family: Roboto;
+  line-height: 25px;
+}
+
+
 
 // Contact Page
+
+.contact-page {
+  height: 100vw;
+  background: url('snazzy-image.png') center;
+}
+
+.contact-box {
+  padding-top: 90px;
+}
+
+.contact {
+  background-color: black;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
 
 .contact-form {
   width: 60%;

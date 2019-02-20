@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :edit]
 
   # GET /products
   # GET /products.json
@@ -7,9 +8,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
-      # rturn our filtered list here
+      # return our filtered list here
     else
       @products = Product.all
+      @user = current_user
     end
   end
 
