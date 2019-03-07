@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe  OrdersController, type: :controller do
   #should only be able to see orders if you're logged in
-  let(:user) { User.create!(first_name: "Sandy", last_name: "Khan", email: "sandy@email.com", password: "password") }
-  let(:order) { Order.new(product: product, total: 1000.00)}
+  let(:user)  { FactoryBot.create(:user) }
+  # let(:order) { Order.new(product: product, total: 1000.00)}
+  let(:order)  { FactoryBot.build(:order) }
 
   describe 'GET #index' do
     context 'when a user is logged in' do
