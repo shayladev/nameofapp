@@ -3,7 +3,7 @@
 <div class="container orders-table">
 
   <h1>Past Orders</h1>
-  
+
   <% @orders.each do |order| %>
     <div class="row">
       <div class="col-sm-12 col-md-4 col-lg-7 order-row">
@@ -14,7 +14,7 @@
           Order # <%= order.id %>:
           <%= link_to order.product.name, order %>
         </h3>
-        <strong>$ <%= order.product.price.round(2) %></strong>
+        <strong><%= number_to_currency(order.product.price.to_f)%></strong>
         <p class="orders-description"><%= order.product.description %></p>
         <div>
             <h2 class="orders-total" >Total: $<%= (order.product.price * 1.13).round(2) %> </h2>
