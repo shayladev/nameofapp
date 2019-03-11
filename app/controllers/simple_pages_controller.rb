@@ -11,7 +11,6 @@ class SimplePagesController < ApplicationController
 
   def landing_page
     render layout: "landing_page"
-
   end
 
   # POST simple_pages/thank_you
