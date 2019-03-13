@@ -75,3 +75,6 @@ gem 'will_paginate', '~> 3.1.0'
 
 # Use for processing payments
 gem 'stripe'
+
+#security scanner
+gem 'brakeman'
