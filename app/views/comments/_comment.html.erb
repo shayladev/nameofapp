@@ -1,0 +1,18 @@
+<!-- <div class="row"> -->
+  <div class="user-customer">
+    <% if comment.user.first_name %>
+      <p><%= image_tag("user.png", class: "avatar") %><%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago"%></em></small></p>
+    <% else %>
+      <p><%= image_tag("user.png", class: "avatar") %>Anonymous<small><em><%= "#{time_ago_in_words(comment.created_at)} ago"%></em></small></p>
+    <% end %>
+  </div>
+  <div class="rated star-rating" data-score="<%= comment.rating %>"></div>
+  <div class="customer-review-body">
+    <p><%= comment.body %>
+      <% if signed_in? && current_user.admin? %>
+        <span class="destroy-icon"><%= link_to image_tag('delete.png', alt:"Destroy").html_safe, product_comment_path(comment.product, comment), method: :delete, data: {confirm: 'Are you sure?'} %></span>
+      <% end %>
+    </p>
+
+  </div>
+<!-- </div> -->
