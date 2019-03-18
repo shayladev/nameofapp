@@ -1,4 +1,5 @@
 <!-- <div class="row"> -->
+
   <div class="user-customer">
     <% if comment.user.first_name %>
       <p><%= image_tag("user.png", class: "avatar") %><%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago"%></em></small></p>
