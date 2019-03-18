@@ -78,3 +78,6 @@ gem 'stripe'
 
 #security scanner
 gem 'brakeman'
+
+gem 'dalli'
+gem 'memcachier'
