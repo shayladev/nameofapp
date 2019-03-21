@@ -62,4 +62,6 @@ Rails.application.configure do
   # so dynamic links that show up inside emails from the development environment generate the right URLs
   config.action_mailer.default_url_options = { host: 'localhost:3000'}
 
+  config.app_generators.javascript_engine = :javascript
+
 end

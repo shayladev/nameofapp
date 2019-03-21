@@ -2,6 +2,12 @@ class SimplePagesController < ApplicationController
   def index
     @featured_product = Product.first
     @products = Product.limit(3)
+    # if @pageviews = nil
+    #   $redis.set("views",0)
+    #   @pageviews = $redis.get("views")
+    # # else
+    # #   @pageviews = $redis.get("views")
+    # end
 
   end
 
@@ -13,6 +19,14 @@ class SimplePagesController < ApplicationController
     render layout: "landing_page"
   end
 
+  # def total_views
+  #   if @pageviews = nil
+  #     $redis.set("views",0)
+  #     @pageviews = $redis.get("views")
+  #   else
+  #     @pageviews = $redis.get("views")
+  #   end
+  # end
   # POST simple_pages/thank_you
 
   def thank_you
