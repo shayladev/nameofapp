@@ -1,7 +1,7 @@
 
-<% cache @product do %>
+
 <div class="product-show container">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-md-12 col-lg-6">
       <h1 class= "product-show-name">
       <%= @product.name %></h1>
@@ -61,5 +61,3 @@
 
 
 </div>
-
-<% end %>
