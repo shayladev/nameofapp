@@ -32,6 +32,8 @@ class Ability
     can :manage, User, id: user.id
       if user.admin?
         can :destroy, :Comment
+        can :destory, :Product
+        can :edit, :Product
       end
   end
 end
