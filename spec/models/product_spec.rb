@@ -30,4 +30,51 @@ describe Product do
     end
   end
 
+
+  context "when a term is searched" do
+    let(:product)  { FactoryBot.create(:product)}
+
+    before do
+      Product.new(name: "Mountain Bike")
+      Product.new(name: "Racing Bike")
+      Product.new(name: "Road Bike")
+    end
+
+    it "returns all products with the search term included in product name" do
+      expect(Product.search("Other")).not_to be true
+    end
+  end
+
+  context "when the product has comments" do
+    let(:user)  { FactoryBot.create(:user) }
+    let(:product)  { FactoryBot.create(:product) }
+    let(:comment) {FactoryBot.create(:comment)}
+
+      before do
+        product.comments.create(rating: 1, user: user, body: "Awful bike")
+        product.comments.create(rating: 3, user: user, body: "Ok bike!")
+        product.comments.create(rating: 5, user: user, body: "Great bike!")
+      end
+
+    it "returns the highest rating of all comments" do
+      expect(product.highest_rating_comment.rating).to eq 5.0
+    end
+  end
+
+  context "when the product has comments" do
+    let(:user)  { FactoryBot.create(:user) }
+    let(:product)  { FactoryBot.create(:product) }
+    let(:comment) {FactoryBot.create(:comment)}
+
+      before do
+        product.comments.create(rating: 1, user: user, body: "Awful bike")
+        product.comments.create(rating: 3, user: user, body: "Ok bike!")
+        product.comments.create(rating: 5, user: user, body: "Great bike!")
+      end
+
+    it "returns the highest rating of all comments" do
+      expect(product.lowest_rating_comment.rating).to eq 1.0
+    end
+  end
+
 end

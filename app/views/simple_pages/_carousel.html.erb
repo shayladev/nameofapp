@@ -1,5 +1,6 @@
 <div class="carousel-item<%= " active" if product == @products.first %>">
-    <img class="d-block w-100 carousel-image" src="<%= product.image_url %>" alt="slide">
+    <%= link_to "#{image_tag(product.image_url, class: "d-block w-100 carousel-image")}".html_safe, product %>
+    <!-- <#% <img class="d-block w-100 carousel-image" src="<#%= product.image_url %>" alt="slide"> %> -->
     <div class="carousel-caption d-none d-md-block home-page-carousel-caption">
       <h1 class="caption-header"><%= product.name %></h1>
       <p class="caption-price"><%= number_to_currency(product.price.to_f)%></p>
