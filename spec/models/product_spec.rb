@@ -72,7 +72,7 @@ describe Product do
         product.comments.create(rating: 5, user: user, body: "Great bike!")
       end
 
-    it "returns the highest rating of all comments" do
+    it "returns the lowest rating of all comments" do
       expect(product.lowest_rating_comment.rating).to eq 1.0
     end
   end
