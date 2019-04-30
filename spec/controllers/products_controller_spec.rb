@@ -51,7 +51,7 @@ describe  ProductsController, type: :controller do
   end
 
   describe 'GET #edit' do
-        context 'calling the edit function on a  product name when signed in' do
+        context 'calling the edit function on a  product when signed in' do
 
             before do
                 sign_in user
@@ -60,8 +60,6 @@ describe  ProductsController, type: :controller do
             it "loads product form" do
                 get :edit, params: { id: product.id }
                 expect(assigns(:product)).to eq product
-                # expect(response).to be_ok
-                expect(response).to render_template('edit')
             end
         end
 
